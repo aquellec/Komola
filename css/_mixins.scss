@@ -1,0 +1,49 @@
+//Gestion des scrollbars
+@mixin scrollbar($bg_color_track, $bg_color_scroll, $width) {
+  scrollbar-color: $bg_color_scroll $bg_color_track;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar-track {
+    background-color: $bg_color_track;
+  }
+
+  &::-webkit-scrollbar {
+    width: $width;
+    background-color: $bg_color_track;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $bg_color_scroll;
+  }
+}
+@mixin sectionStyle($top, $bottom) {
+  margin: 75px 100px;
+  background-color: white;
+  padding: 50px 75px;
+  border-radius: $top $top $bottom $bottom;
+
+  @media (max-width: 991px) {
+    padding: 40px 80px;
+    margin: 50px 90px;
+  }
+
+  @media (max-width: 575px) {
+    padding: 15px 50px;
+    margin: 20px 40px;
+  }
+}
+@mixin sectionTitle($upper, $color) {
+  text-align: center;
+  text-transform: $upper;
+  font-size: 30px;
+  color: $color;
+  margin: 0;
+  font-weight: 600;
+}
+@mixin inputGlobal($color) {
+  border: 1px solid $color;
+  border-radius: 5px;
+  background-color: transparent;
+  padding: 10px;
+  color: $color;
+}

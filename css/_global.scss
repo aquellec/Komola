@@ -1,0 +1,100 @@
+// Fonts
+@font-face {
+  font-family: "OpenSans";
+  src: url("fonts/OpenSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("fonts/OpenSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("fonts/OpenSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("fonts/OpenSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+// Variables
+$main-color: #ed4f2e;
+
+$bg-contour: #ebebeb;
+$bg-color: #ffffff;
+
+$txt-color: #4f4f4f;
+$txt-color-dark: #ffffff;
+
+$dark: #1f2c33;
+$dark-red: #8f301d;
+$light-grey: #a3b1bf;
+$grey: #404b51;
+$dark-blue: #283645;
+
+$main-font: "OpenSans", sans-serif;
+$transition: all 0.3s;
+
+* {
+  font-family: $main-font;
+}
+
+html,
+body {
+  color: $txt-color;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background-color: $bg-contour;
+}
+
+html {
+  @include scrollbar($bg_color, $main-color, 10px);
+}
+.cont-btn {
+  display: flex;
+  align-items: center;
+
+  a {
+    border: 2px solid $main-color;
+    text-transform: uppercase;
+    color: $main-color;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 15px 35px;
+    text-align: center;
+    border-radius: 10px;
+    transition: $transition;
+
+    @media (max-width: 575px) {
+      width: 100%;
+    }
+
+    &:hover {
+      background-color: $main-color;
+      color: #fff;
+    }
+  }
+
+  &-home {
+    a {
+      border-color: #fff;
+      color: #fff;
+
+      &:hover {
+        background-color: #fff;
+        color: $main-color;
+      }
+    }
+  }
+}

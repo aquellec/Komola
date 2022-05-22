@@ -1,0 +1,20 @@
+%sectionFonce {
+  height: 60vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+}
+%flexgrid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
